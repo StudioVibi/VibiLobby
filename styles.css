@@ -205,6 +205,10 @@ body {
   aspect-ratio: 16 / 9;
   border-bottom: 1px solid rgba(101, 123, 131, 0.2);
   overflow: hidden;
+  background-color: var(--base2);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .preview::before {
@@ -236,39 +240,27 @@ body {
 }
 
 .preview-1 {
-  background:
-    linear-gradient(120deg, rgba(38, 139, 210, 0.78), rgba(42, 161, 152, 0.68)),
-    linear-gradient(transparent 44%, rgba(253, 246, 227, 0.22) 44% 58%, transparent 58%);
+  background-image: url("./img/vibi%20home.png");
 }
 
 .preview-2 {
-  background:
-    linear-gradient(125deg, rgba(181, 137, 0, 0.75), rgba(203, 75, 22, 0.75)),
-    linear-gradient(transparent 48%, rgba(253, 246, 227, 0.24) 48% 61%, transparent 61%);
+  background-image: url("./img/vibitiles-ostrowskii.png");
 }
 
 .preview-3 {
-  background:
-    linear-gradient(125deg, rgba(133, 153, 0, 0.78), rgba(42, 161, 152, 0.72)),
-    linear-gradient(transparent 46%, rgba(253, 246, 227, 0.2) 46% 59%, transparent 59%);
+  background-image: url("./img/vibitiles-original.png");
 }
 
 .preview-4 {
-  background:
-    linear-gradient(125deg, rgba(88, 110, 117, 0.82), rgba(38, 139, 210, 0.65)),
-    linear-gradient(transparent 43%, rgba(253, 246, 227, 0.24) 43% 58%, transparent 58%);
+  background-image: url("./img/vibiMap.png");
 }
 
 .preview-5 {
-  background:
-    linear-gradient(125deg, rgba(42, 161, 152, 0.84), rgba(133, 153, 0, 0.68)),
-    linear-gradient(transparent 48%, rgba(253, 246, 227, 0.23) 48% 61%, transparent 61%);
+  background-image: url("./img/vibishowdown.png");
 }
 
 .preview-6 {
-  background:
-    linear-gradient(125deg, rgba(203, 75, 22, 0.8), rgba(181, 137, 0, 0.72)),
-    linear-gradient(transparent 45%, rgba(253, 246, 227, 0.2) 45% 59%, transparent 59%);
+  background-image: url("./img/minimal_racer.png");
 }
 
 .card-body {
