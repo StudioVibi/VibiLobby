@@ -26,14 +26,14 @@
       </section>
 
       <section class="chips" aria-label="Categorias">
-        <button type="button" class="chip active">todos</button>
-        <button type="button" class="chip">github pages</button>
-        <button type="button" class="chip">vibi core</button>
-        <button type="button" class="chip">labs</button>
+        <button type="button" class="chip active" data-filter="all" aria-pressed="true">todos</button>
+        <button type="button" class="chip" data-filter="vibishowdown" aria-pressed="false">
+          vibishowdown
+        </button>
       </section>
 
       <main class="card-grid" aria-label="Cards de sites">
-        <article class="site-card">
+        <article class="site-card" data-project="other">
           <a href="https://www.studiovibi.com/" class="card-link" target="_blank" rel="noopener noreferrer">
             <div class="preview preview-1" aria-hidden="true"></div>
             <div class="card-body">
@@ -46,7 +46,7 @@
           </a>
         </article>
 
-        <article class="site-card">
+        <article class="site-card" data-project="other">
           <a
             href="https://ostrowskii.github.io/VibiTiles/"
             class="card-link"
@@ -64,7 +64,7 @@
           </a>
         </article>
 
-        <article class="site-card">
+        <article class="site-card" data-project="other">
           <a
             href="https://studiovibi.github.io/VibiMonTiles/"
             class="card-link"
@@ -82,7 +82,7 @@
           </a>
         </article>
 
-        <article class="site-card">
+        <article class="site-card" data-project="other">
           <a
             href="https://studiovibi.github.io/VibiMonMapEditor/"
             class="card-link"
@@ -100,7 +100,7 @@
           </a>
         </article>
 
-        <article class="site-card">
+        <article class="site-card" data-project="vibishowdown">
           <a
             href="https://studiovibi.github.io/VibiShowdown/vibishowdown/"
             class="card-link"
@@ -118,7 +118,7 @@
           </a>
         </article>
 
-        <article class="site-card">
+        <article class="site-card" data-project="other">
           <a
             href="https://carolinewk.github.io/minimal_racer/"
             class="card-link"
@@ -137,5 +137,35 @@
         </article>
       </main>
     </div>
+
+    <script>
+      (() => {
+        const chips = Array.from(document.querySelectorAll(".chip[data-filter]"));
+        const cards = Array.from(document.querySelectorAll(".site-card"));
+        if (!chips.length || !cards.length) return;
+
+        const applyFilter = (filter) => {
+          cards.forEach((card) => {
+            const project = card.dataset.project || "";
+            const visible = filter === "all" || project === filter;
+            card.classList.toggle("is-hidden", !visible);
+          });
+
+          chips.forEach((chip) => {
+            const active = chip.dataset.filter === filter;
+            chip.classList.toggle("active", active);
+            chip.setAttribute("aria-pressed", String(active));
+          });
+        };
+
+        chips.forEach((chip) => {
+          chip.addEventListener("click", () => {
+            applyFilter(chip.dataset.filter || "all");
+          });
+        });
+
+        applyFilter("all");
+      })();
+    </script>
   </body>
 </html>

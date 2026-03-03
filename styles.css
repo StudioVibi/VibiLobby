@@ -291,6 +291,10 @@ body {
   box-shadow: 0 14px 28px rgba(88, 110, 117, 0.18);
 }
 
+.site-card.is-hidden {
+  display: none;
+}
+
 .site-card,
 .chip {
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
