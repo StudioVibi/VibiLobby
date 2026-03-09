@@ -227,15 +227,11 @@ body {
 }
 
 .preview-8 {
-  background-image:
-    linear-gradient(145deg, rgba(38, 139, 210, 0.75), rgba(42, 161, 152, 0.68)),
-    radial-gradient(circle at 28% 24%, rgba(253, 246, 227, 0.82), transparent 22%);
+  background-image: url("./img/starfox-2d.png");
 }
 
 .preview-9 {
-  background-image:
-    linear-gradient(145deg, rgba(181, 137, 0, 0.78), rgba(203, 75, 22, 0.72)),
-    radial-gradient(circle at 72% 26%, rgba(253, 246, 227, 0.78), transparent 18%);
+  background-image: url("./img/mage-battle.png");
 }
 
 .preview-10 {
