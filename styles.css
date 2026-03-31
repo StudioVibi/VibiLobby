@@ -153,6 +153,10 @@ body {
   animation-delay: 490ms;
 }
 
+.site-card:nth-child(11) {
+  animation-delay: 540ms;
+}
+
 .card-link {
   display: block;
   color: inherit;
@@ -235,7 +239,11 @@ body {
 }
 
 .preview-10 {
-  background-image: url("./img/dino-do-leon.png");
+  background-image: url("./img/dino-ghost.png");
+}
+
+.preview-11 {
+  background-image: url("./img/DungeonBend2.jpg");
 }
 
 .card-body {
