@@ -161,6 +161,10 @@ body {
   animation-delay: 590ms;
 }
 
+.site-card:nth-child(13) {
+  animation-delay: 640ms;
+}
+
 .card-link {
   display: block;
   color: inherit;
@@ -252,6 +256,10 @@ body {
 
 .preview-12 {
   background-image: url("./img/vibi-fight-singleplayer.png");
+}
+
+.preview-13 {
+  background-image: url("./img/chess_line.png");
 }
 
 .card-body {
